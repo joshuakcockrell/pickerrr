@@ -1,0 +1,17 @@
+#url {
+	position: absolute;
+    z-index: 2;
+    bottom: 0px;
+    padding: 40px;
+    color: white;
+}
+
+@media all and (max-width: 750px) {
+	#url {
+		bottom: initial;
+	    top: 0px;
+	    padding: 0px;
+	    margin: 0px;
+	    color: black;
+	}
+}
