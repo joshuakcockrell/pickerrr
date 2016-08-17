@@ -8,8 +8,8 @@ function sleepFor( sleepDuration ){
     while(new Date().getTime() < now + sleepDuration){ /* do nothing */ } 
 }
 
-var minColor = 8400;
-var maxColor = 10000;
+var minColor = 12570;
+var maxColor = 20000;
 
 function runColor() {
 
@@ -22,7 +22,7 @@ function runColor() {
     }
 
     if (minColor <= maxColor) {
-		setTimeout(runColor, 2010);
+		setTimeout(runColor, 1010);
     }
 }
 

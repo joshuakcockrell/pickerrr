@@ -1,8 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Palette from './Palette';
+import Url from './Url';
 import $ from 'jquery';
+import ReactGA from 'react-ga';
 import './index.css';
+
+
+// var ReactGA = require('react-ga');
+ReactGA.initialize('UA-82641294-1');
+ReactGA.set({ page: window.location.pathname });
+ReactGA.pageview(window.location.pathname);
 
 function getPalettes(callback) {
   console.log('GET random colors called');
@@ -40,8 +48,15 @@ function loadPalettes() {
 loadPalettes();
 
 function displayColor() {
+
+  ReactGA.event({
+    category: 'Display Color'
+  });
+
   if (palettes.length > 0) {
-    ReactDOM.render(<Palette palette={palettes.pop()} />, document.getElementById('container'));
+    var nextPalette = palettes.pop()
+    ReactDOM.render(<Url url={nextPalette.url} />, document.getElementById('url'));
+    ReactDOM.render(<Palette palette={nextPalette} />, document.getElementById('container'));
   }
   if (palettes.length < 2) {
     console.log('loading more palettes!');
@@ -57,7 +72,7 @@ document.body.onkeyup = function(e){
   }
 }
 
-document.addEventListener('touchstart', function(e) {
+document.addEventListener('touchend', function(e) {
     e.preventDefault();
     displayColor();
 }, false);

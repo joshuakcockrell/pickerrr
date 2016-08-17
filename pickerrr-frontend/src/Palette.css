@@ -1,16 +1,3 @@
-#nav-bar {
-	height: 10vh;
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid #DADADA;
-}
-
-#title {
-	font-weight: lighter;
-    font-size: 30px;
-    padding: 10px;
-}
-
 #palette {
 	height: 90vh;
 	display: flex;

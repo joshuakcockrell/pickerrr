@@ -8,7 +8,7 @@
 	justify-content: center;
 }
 
-span {
+.value {
     text-transform: uppercase;
 	background: transparent;
     border: 0;
@@ -17,11 +17,11 @@ span {
 	color: white;
 }
 
-span::placeholder {
+.value::placeholder {
 	color: white;
 }
 
-span:focus {
+.value:focus {
     outline: none;
 }
 
@@ -42,7 +42,7 @@ button {
     margin: 20px;
 }
 
-span, i.fa, #url{
+.value, i.fa, #url{
 	margin-top: 5px;
 	margin-bottom: 5px;
 	width: 100%;
@@ -55,3 +55,14 @@ i.fa {
 	color: white;
 }
 
+
+@media all and (max-height: 600px) and (max-width: 750px) {
+    .color {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .value {
+    	width: initial;
+    }
+}

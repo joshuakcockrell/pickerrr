@@ -9,7 +9,8 @@
     "jquery": "^3.1.0",
     "react": "^15.2.1",
     "react-dom": "^15.2.1",
-    "react-dragula": "^1.1.16"
+    "react-dragula": "^1.1.16",
+    "react-ga": "^2.1.1"
   },
   "scripts": {
     "start": "react-scripts start",

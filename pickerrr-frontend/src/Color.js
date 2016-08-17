@@ -24,8 +24,8 @@ class Color extends Component {
 
     return (
       <div className="color" style={{"backgroundColor": color}}>
-        <span id="hex" contentEditable="true">{color}</span>
-        <span id="rgb" contentEditable="true">{rgbString}</span>
+        <span className="hex value" contentEditable="true">{color}</span>
+        <span className="rgb value" contentEditable="true">{rgbString}</span>
       </div>
     );
   }

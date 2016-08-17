@@ -23,7 +23,7 @@ function toUrl(number) {
 
 module.exports = (number) => {
   var url = toUrl(number);
-  console.log(url);
+  // console.log(url);
 
   // Get the colors
   fetchColors(url, function(err, colors) {
@@ -34,7 +34,7 @@ module.exports = (number) => {
     }
 
     if (colors.length === 0) {
-      console.log(number + ' doesnt have colors');
+      console.log(number + '|   404');
       return;
     }
 
@@ -65,7 +65,7 @@ module.exports = (number) => {
 
       var statusCode = response.statusCode.toString();
 
-      console.log(number + ' ' + statusCode);
+      console.log(number + '|' + statusCode);
 
       if (statusCode === 200) {
         console.log(number + ' success.');
